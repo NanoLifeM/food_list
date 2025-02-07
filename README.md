@@ -36,6 +36,7 @@ class ExecuteCodeForUse extends StatelessWidget {
   void foodCardController(FoodCardController controller) {
     print(
       "${controller.foodName} , ${controller.price} , ${controller.currency.currency} ",
+      /// get image for use => controller.foodImage.image
     );
   }
 
