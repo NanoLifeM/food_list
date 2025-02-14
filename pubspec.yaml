@@ -1,6 +1,6 @@
 name: food_list
 description: "A flutter package for show  a beautiful list Foods ."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/MN0srati/food_list
 
 environment:
