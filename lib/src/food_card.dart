@@ -56,7 +56,7 @@ class FoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
+      width: 160,
       height: 350,
       decoration: BoxDecoration(
         color: backgroundColor,
