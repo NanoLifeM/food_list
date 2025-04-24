@@ -1,6 +1,6 @@
 name: food_list
 description: "A flutter package for show  a beautiful list Foods ."
-version: 0.0.4
+version: 0.0.5
 homepage: https://github.com/MN0srati/food_list
 
 environment:
@@ -26,6 +26,7 @@ flutter:
   # To add assets to your package, add an assets section, like this:
   assets:
     - assets/images/
+    
   #
   # For details regarding assets in packages, see
   # https://flutter.dev/to/asset-from-package
