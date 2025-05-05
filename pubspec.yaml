@@ -4,7 +4,7 @@ version: 0.0.6
 homepage: https://github.com/MN0srati/food_list
 
 environment:
-  sdk: ">=3.0.0 <=4.0.0"
+  sdk: ">=3.0.0 <=3.9.0"
   flutter: ">=1.17.0"
 
 dependencies:
