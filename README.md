@@ -1,10 +1,29 @@
 ## List Foods Package
 this package for show beautiful list from foods.
+## Screens
+
+<div dir="rtl" align="center">
+  <img src="assets/screens/img1.jpg" alt="Screen 1 " width="300" />
+    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/screens/img2.jpg" alt="Screen 2 " width="300" >
+ <p></p>
+  <img src="assets/screens/img3.jpg" alt="Screen 3 "  width="300"  />
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/screens/img4.jpg" alt="Screen 4 "  width="300"  />
+  <p></p>
+  <img src="assets/screens/img5.jpg" alt="Screen 5 "  width="300"  />
+   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="assets/screens/img6.jpg" alt="Screen 6 "  width="300"  />
+  <p></p>
+  <img src="assets/screens/img7.jpg" alt="Screen 7 "  width="300"  />
+   
+ 
+  
+</div>
 
 ## Usage
 
-
-```dart
+```Dart
 
 class ExecuteCodeForUse extends StatelessWidget {
   const ExecuteCodeForUse({super.key});
