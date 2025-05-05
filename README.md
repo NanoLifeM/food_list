@@ -2,7 +2,7 @@
 this package for show beautiful list from foods.
 ## Screens
 
-<div dir="rtl" align="center">
+<div align="center">
   <img src="assets/screens/img1.jpg" alt="Screen 1 " width="300" />
     &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="assets/screens/img2.jpg" alt="Screen 2 " width="300" >
