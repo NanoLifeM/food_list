@@ -4,25 +4,25 @@ this package for show beautiful list from foods.
 <p></p>
 <div align="center">
 <div>
-<img src="assets/screens/img1.jpg" alt="Screen 1 " width="300" />
+<img src="assets/screens/img1.jpg" alt="Screen 1 " width="300" height="300"/>
 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="assets/screens/img2.jpg" alt="Screen 2 " width="300" />
+<img src="assets/screens/img2.jpg" alt="Screen 2 " width="300" height="300"/>
 </div>
  <p></p>
   <div> 
-<img src="assets/screens/img3.jpg" alt="Screen 3 "  width="300"  />
+<img src="assets/screens/img3.jpg" alt="Screen 3 "  width="300"  height="300"/>
 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="assets/screens/img4.jpg" alt="Screen 4 "  width="300"  />
+<img src="assets/screens/img4.jpg" alt="Screen 4 "  width="300"  height="300"/>
   </div>
  <p></p>
  <div>
-<img src="assets/screens/img5.jpg" alt="Screen 5 "  width="300"  />
+<img src="assets/screens/img5.jpg" alt="Screen 5 "  width="300" height="300" />
 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="assets/screens/img6.jpg" alt="Screen 6 "  width="300"  />
+<img src="assets/screens/img6.jpg" alt="Screen 6 "  width="300"  height="300"/>
  </div>
  <p></p>
   <div>
-<img src="assets/screens/img7.jpg" alt="Screen 7 "  width="300"  />
+<img src="assets/screens/img7.jpg" alt="Screen 7 "  width="300"  height="300"/>
   </div>
 </div>
 
