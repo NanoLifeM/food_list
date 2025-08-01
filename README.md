@@ -1,367 +1,130 @@
-## List Foods Package
-this package for show beautiful list from foods.
-<h1>Screens</h1>
-<p></p>
+
+# List Foods Package
+
+[![pub version](https://img.shields.io/pub/v/food_list)](https://pub.dev/packages/food_list) [![Platform](https://img.shields.io/badge/platform-flutter-blue)](https://flutter.dev)
+
+A Flutter package to display a beautiful, customizable list of food cards with images, titles, prices, and interaction callbacks.
+
+## ✨ Features
+
+- **Horizontal & Vertical Lists**: Easily switch between horizontal and vertical scrolling layouts.
+- **Customizable Food Card**: Display food image, name, price, and currency.
+- **Interaction Callback**: Handle taps with a controller callback.
+- **Lightweight & Dependency-Free**: Pure Dart/Flutter implementation.
+
+## 🖼 Screenshots
 <div align="center">
-<div>
-<img src="assets/screens/img1.jpg" alt="Screen 1 " width="300" height="650"/>
-&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="assets/screens/img2.jpg" alt="Screen 2 " width="300" height="650"/>
-</div>
- <p></p>
-  <div> 
-<img src="assets/screens/img3.jpg" alt="Screen 3 "  width="300"  height="650"/>
-&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="assets/screens/img4.jpg" alt="Screen 4 "  width="300"  height="650"/>
-  </div>
- <p></p>
- <div>
-<img src="assets/screens/img5.jpg" alt="Screen 5 "  width="300" height="650" />
-&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="assets/screens/img6.jpg" alt="Screen 6 "  width="300"  height="650"/>
- </div>
- <p></p>
-  <div>
-<img src="assets/screens/img7.jpg" alt="Screen 7 "  width="300"  height="650"/>
-  </div>
+  <table>
+    <tr>
+      <td><img src="assets/screens/img1.jpg" alt="Screen 1" width="200"/></td>
+      <td><img src="assets/screens/img2.jpg" alt="Screen 2" width="200"/></td>
+    </tr>
+    <tr>
+      <td><img src="assets/screens/img3.jpg" alt="Screen 3" width="200"/></td>
+      <td><img src="assets/screens/img4.jpg" alt="Screen 4" width="200"/></td>
+    </tr>
+    <tr>
+      <td><img src="assets/screens/img5.jpg" alt="Screen 5" width="200"/></td>
+      <td><img src="assets/screens/img6.jpg" alt="Screen 6" width="200"/></td>
+    </tr>
+    <tr>
+      <td colspan="2"><img src="assets/screens/img7.jpg" alt="Screen 7" width="200"/></td>
+    </tr>
+  </table>
 </div>
 
-## Usage
+## 🚀 Installation
 
-```Dart
+Add the latest version of `food_list` to your `pubspec.yaml` dependencies:
 
-class ExecuteCodeForUse extends StatelessWidget {
-  const ExecuteCodeForUse({super.key});
+```yaml
+dependencies:
+  food_list: ^1.0.0
+```
 
-  void foodCardController(FoodCardController controller) {
-    print(
-      "${controller.foodName} , ${controller.price} , ${controller.currency.currency} ",
-      /// get image for use => controller.foodImage.image
+Then run:
+
+```bash
+flutter pub get
+```
+
+## 💻 Usage
+
+Import the package and use one of two main widgets:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:food_list/food_list.dart';
+
+class MyFoodDemo extends StatelessWidget {
+  const MyFoodDemo({Key? key}) : super(key: key);
+
+  void _onFoodSelected(FoodCardController controller) {
+    debugPrint(
+      'Selected: ${controller.foodName} - ${controller.price} ${controller.currency.currency}',
     );
+    // Access image via controller.foodImage.image
   }
 
   @override
   Widget build(BuildContext context) {
-   
-    List<FoodCard> listFood = [
+    final items = <FoodCard>[
       FoodCard(
-        foodName: "Burger",
+        foodName: 'Burger',
         foodImage: ImageFoods.burger,
-        price: "10",
+        price: '10',
         currency: CurrencyFood.dollar,
-        listen: foodCardController,
+        listen: _onFoodSelected,
       ),
-      FoodCard(
-          foodName: "French Fries",
-          foodImage: ImageFoods.frenchFries,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Double Double\nBurger",
-          foodImage: ImageFoods.doubleDouble,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Chicken Sandwich",
-          foodImage: ImageFoods.chickenSandwich,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Pizza",
-          foodImage: ImageFoods.pizza,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Noodle",
-          foodImage: ImageFoods.noodle,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "HotDog",
-          foodImage: ImageFoods.hotDog,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Filet O\nFish",
-          foodImage: ImageFoods.filetOFish,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Steak Burger",
-          foodImage: ImageFoods.steakBurger,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Spicy Chicken",
-          foodImage: ImageFoods.spicyChicken,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Blizzard",
-          foodImage: ImageFoods.blizzard,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Salad",
-          foodImage: ImageFoods.salad,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Animal Style\nBurger",
-          foodImage: ImageFoods.animalStyleBurger,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Animal Style\nFries",
-          foodImage: ImageFoods.animalStyleFries,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Baked Apple\nPie",
-          foodImage: ImageFoods.bakedApplePie,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "BigMac",
-          foodImage: ImageFoods.bigMac,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Biscuits",
-          foodImage: ImageFoods.biscuits,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Cheese Curds",
-          foodImage: ImageFoods.cheeseCurds,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Cheesy Gordita\nCrunch",
-          foodImage: ImageFoods.cheesyGorditaCrunch,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Cherry Limeade",
-          foodImage: ImageFoods.cherryLimeade,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Chicken1",
-          foodImage: ImageFoods.chicken1,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Chicken2",
-          foodImage: ImageFoods.chicken2,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Chicken Biscuit",
-          foodImage: ImageFoods.chickenBiscuit,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Chicken Fingers",
-          foodImage: ImageFoods.chickenFingers,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Chicken Nugget",
-          foodImage: ImageFoods.chickenNugget,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Chicken Quesadilla",
-          foodImage: ImageFoods.chickenQuesadilla,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Chicken Tenders",
-          foodImage: ImageFoods.chickenTenders,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Crunchy Shell\nTacos",
-          foodImage: ImageFoods.crunchyShellTacos,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Curly Fries",
-          foodImage: ImageFoods.curlyFries,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Double Shack\nBurger",
-          foodImage: ImageFoods.doubleShackBurger,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Egg Mc Muffin",
-          foodImage: ImageFoods.eggMcMuffin,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Fries",
-          foodImage: ImageFoods.fries,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Frosty",
-          foodImage: ImageFoods.frosty,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Glazed Doughnut",
-          foodImage: ImageFoods.glazedDoughnut,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Hash Browns",
-          foodImage: ImageFoods.hashBrowns,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Honey BBQ\nChicken Sandwich",
-          foodImage: ImageFoods.honeyBBQChickenSandwich,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Mashed Potatos\nAnd Cajun Gravy",
-          foodImage: ImageFoods.mashedPotatosAndCajunGravy,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Mc Flurry",
-          foodImage: ImageFoods.mcFlurry,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Mc Griddle",
-          foodImage: ImageFoods.mcGriddle,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Mc Nuggets",
-          foodImage: ImageFoods.mcNuggets,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Original Chicken\nSandwich",
-          foodImage: ImageFoods.originalChickenSandwich,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Pretzel",
-          foodImage: ImageFoods.pretzel,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Quarter Pounder",
-          foodImage: ImageFoods.quarterPounder,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Roast Beef\nSandwich",
-          foodImage: ImageFoods.roastBeefSandwich,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Shack Burger",
-          foodImage: ImageFoods.shackBurger,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Soft Tacos",
-          foodImage: ImageFoods.softTacos,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Spicy Chicken\nDeluxe Sandwich",
-          foodImage: ImageFoods.spicyChickenDeluxeSandwich,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Two Tacos",
-          foodImage: ImageFoods.twoTacos,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Whopper",
-          foodImage: ImageFoods.whopper,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
-      FoodCard(
-          foodName: "Waffle Fries",
-          foodImage: ImageFoods.waffleFries,
-          price: "10",
-          currency: CurrencyFood.dollar,
-          listen: foodCardController),
+      // Add more FoodCard items...
     ];
 
-    /// The itemCount must be equal to the length of the items. otherwise, you w
-
     return Column(
-        spacing: 30,
-        children: [
-          ListFoodsHorizontal(itemCount: 50, items: listFood, color: Colors.white70),
-          ListFoodsVertical(itemCount: 50, items: listFood, color: Colors.white70,),
-        ]
+      children: [
+        // Horizontal list
+        ListFoodsHorizontal(
+          itemCount: items.length,
+          items: items,
+          color: Colors.white70,
+        ),
+
+        const SizedBox(height: 24),
+
+        // Vertical list
+        ListFoodsVertical(
+          itemCount: items.length,
+          items: items,
+          color: Colors.white70,
+        ),
+      ],
     );
   }
 }
-
-
 ```
 
+### Widget Parameters
 
+| Widget                | Parameter   | Type             | Description                |
+| --------------------- | ----------- | ---------------- | -------------------------- |
+| `ListFoodsHorizontal` | `itemCount` | `int`            | Number of items            |
+|                       | `items`     | `List<FoodCard>` | List of `FoodCard` models  |
+|                       | `color`     | `Color`          | Background color for cards |
+| `ListFoodsVertical`   | `itemCount` | `int`            | Number of items            |
+|                       | `items`     | `List<FoodCard>` | List of `FoodCard` models  |
+|                       | `color`     | `Color`          | Background color for cards |
 
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+*Made with ❤️ by [NanoLifeM](https://github.com/NanoLifeM)*
+
+```
+```
 
